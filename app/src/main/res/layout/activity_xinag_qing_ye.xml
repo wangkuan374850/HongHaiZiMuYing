@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.wangkuan.honghaizimuying.XinagQingYeActivity">
+
+    <FrameLayout
+
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffcc"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/biaoqian_shouye"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/shouye"
+            android:button="@null"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/biaoqian_feilei"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/fenlei"
+            android:button="@null"
+            android:singleLine="true"
+            />
+
+        <RadioButton
+            android:id="@+id/biaoqian_gouwuche"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/gouwuche"
+            android:button="@null"
+            android:singleLine="true"/>
+
+        <RadioButton
+            android:id="@+id/biaoqian_wode"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/wode"
+            android:button="@null"
+            android:singleLine="true"
+            />
+    </RadioGroup>
+
+</LinearLayout>

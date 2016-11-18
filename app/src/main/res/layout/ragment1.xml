@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="#ff6666"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/fragment1_saomiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/icon_scan_top"/>
+
+        <RelativeLayout
+            android:id="@+id/fragment1_sousuo"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@mipmap/aa">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/search_edit_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="红地要出名啦哦！！！"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/fragment1_xiaoxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/icon_mes_top"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.wangkuan.honghaizimuying.view.MyViewPager
+                    android:id="@+id/fragment1_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.example.wangkuan.honghaizimuying.view.MyViewPager>
+
+                <LinearLayout
+                    android:id="@+id/fragment1_yuandian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <com.example.wangkuan.honghaizimuying.view.MyGridView
+                android:id="@+id/fragment1_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="4">
+            </com.example.wangkuan.honghaizimuying.view.MyGridView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_zhutui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/fragment1_horizontalscrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.example.wangkuan.honghaizimuying.view.MyGridView
+                        android:id="@+id/aaaa"
+                        android:layout_width="800dp"
+                        android:layout_height="wrap_content"
+                        android:columnWidth="100dp"
+                        android:gravity="center"
+                        android:numColumns="6">
+                    </com.example.wangkuan.honghaizimuying.view.MyGridView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_shiyi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment1_shiyi_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment1_shiyi_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment1_shiyi_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment1_shiyi_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment1_shiyi_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment1_shiyi_6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_muYingZhuanQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment1_muYingZhuanQ_tu1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment1_muYingZhuanQ_tu2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/fragment1_muYingZhuanQ_tu3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment1_muYingZhuanQ_tu4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment1_muYingZhuanQ_tu5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/fragment1_muYingZhuanQ_tu6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fragment1_zhuTiTeMai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/fragment1_zhuTiTeMai_DaTu_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/fragment1_zhuTiTeMai_HuaDong_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.example.wangkuan.honghaizimuying.view.MyGridView
+                        android:id="@+id/bbbb"
+                        android:layout_width="650dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:numColumns="6">
+                    </com.example.wangkuan.honghaizimuying.view.MyGridView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <ImageView
+                android:id="@+id/fragment1_zhuTiTeMai_DaTu_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fragment1_zhuTiTeMai_HuaDong_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.example.wangkuan.honghaizimuying.view.MyGridView
+                        android:id="@+id/cccc"
+                        android:layout_width="650dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:numColumns="6">
+                    </com.example.wangkuan.honghaizimuying.view.MyGridView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/fragment1_zhuTiTeMai_DaTu_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fragment1_zhuTiTeMai_HuaDong_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.example.wangkuan.honghaizimuying.view.MyGridView
+                        android:id="@+id/dddd"
+                        android:layout_width="650dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:numColumns="6">
+                    </com.example.wangkuan.honghaizimuying.view.MyGridView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/fragment1_zhuTiTeMai_DaTu_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fragment1_zhuTiTeMai_HuaDong_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.example.wangkuan.honghaizimuying.view.MyGridView
+                        android:id="@+id/eeee"
+                        android:layout_width="650dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:numColumns="6">
+                    </com.example.wangkuan.honghaizimuying.view.MyGridView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_pintuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_pintuan_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_pintuan_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_pintuan_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_pintuan_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#ffffcc"/>
+
+            <ImageView
+                android:id="@+id/fragment1_biaoti_pintuan_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#ffffcc"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ffff66"
+                android:gravity="center"
+
+                android:text="到底啦，明天十点一元秒杀，千万不要错过哦！！！"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/fragment1_chakangengduo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

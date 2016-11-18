@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.wangkuan.honghaizimuying.view.MyViewPager
+                    android:id="@+id/kk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.example.wangkuan.honghaizimuying.view.MyViewPager>
+
+                <LinearLayout
+                    android:id="@+id/kk1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@mipmap/commodity_bigpaty_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="99.9元"
+                    android:textSize="35sp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/shangpin_biaoti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:lines="2"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/shangpin_jieshao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shangpin_biaoti"
+                        android:layout_marginLeft="10dp"
+                        android:text="苏宁易购自营商品，满86元免运费"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/shangpin_fenxiang"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.3"
+                    android:src="@mipmap/commodity_shear_bg"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ccffcc">
+
+                <TextView
+                    android:id="@+id/shangpin_fuWu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="服务"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/shangpin_you"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/shangpin_fuWu"
+                    android:background="#ffff00"
+                    android:text="邮"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/shangpin_yunfei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/shangpin_you"
+                    android:text="免运费"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#ccff99">
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/shangpin_baiDuDiTu"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:id="@+id/shangpin_songZhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="13dp"
+                    android:text="送至"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/shangpin_diZhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/shangpin_songZhi"
+                    android:text="江苏 南京市  玄武区"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/shangpin_songHuoShiJian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shangpin_diZhi"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="10dp"
+                    android:text="23:00前下单，预计明天（11月18日）送达"
+                    android:textSize="12sp"/>
+
+
+                <ImageView
+                    android:id="@+id/shangpin_anNiu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/paysdk2_change_arrow"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cccc99">
+
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/shangpin_yiXuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="13dp"
+                    android:text="已选"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/shangpin_guiGe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/shangpin_yiXuan"
+                    android:text="中号M64片 一件 "
+                    android:textSize="15sp"/>
+
+
+                <ImageView
+                    android:id="@+id/shangpin_anNiu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/paysdk2_change_arrow"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cccc99"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/shangpin_fukuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="13dp"
+                    android:text="任性付,新用户满88立减30(部分商品不参与活动)"
+                    android:textSize="15sp"/>
+
+
+                <ImageView
+                    android:id="@+id/shangpin_anNiu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/paysdk2_change_arrow"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#ffffcc">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="由“红孩子”销售和发货，并享受售后服务"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#666699"></View>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#ffffcc">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="√送29云钻    √商品保管说明    √不支持无理由退换    √自提"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/shangpin_anNiu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/paysdk2_change_arrow"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

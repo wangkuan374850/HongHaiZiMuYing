@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wangkuan.honghaizimuying.YinDaoYeActivity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/yindao_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:id="@+id/yindao_tiaoguo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/guide_pass"
+        />
+
+    <ImageView
+        android:id="@+id/yindaoye_jinru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:src="@mipmap/guide_start"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/yindaoye_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="530dp"
+        android:orientation="horizontal"
+        >
+
+    </LinearLayout>
+</RelativeLayout>
