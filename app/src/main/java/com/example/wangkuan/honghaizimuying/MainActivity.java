@@ -1,11 +1,12 @@
 package com.example.wangkuan.honghaizimuying;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -32,5 +33,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 4000, 1000);
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

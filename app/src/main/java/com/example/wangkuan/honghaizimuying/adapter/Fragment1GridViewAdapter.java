@@ -49,6 +49,9 @@ public class Fragment1GridViewAdapter extends BaseAdapter {
         TextView tv = (TextView) inflate.findViewById(R.id.fragment1_item_hanzi);
         ImageLoader.getInstance().displayImage("http://image1.suning.cn/" + zhuYe.data.get(1).tag.get(i).picUrl, iv, options);
         tv.setText(zhuYe.data.get(1).tag.get(i).elementName);
+
+
+
         return inflate;
     }
 }

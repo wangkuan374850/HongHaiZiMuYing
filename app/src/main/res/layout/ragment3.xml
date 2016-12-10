@@ -1,10 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-        android:text="3333333"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/fragment3_bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:text="编辑"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"></View>
+
+
+    <ListView
+        android:id="@+id/fragment3_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff">
+
+        <CheckBox
+            android:id="@+id/fragment3_CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/fragment3_quanxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/fragment3_CheckBox"
+            android:text="全选"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/fragment3_geshu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/fragment3_quanxuan"
+            android:text="(已选：0)"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/fragment3_jiesuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="去结算"/>
+
+        <Button
+            android:id="@+id/fragment3_shanchu"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="删除"/>
+
+        <TextView
+            android:id="@+id/fragment3_qian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fragment3_jiesuan"
+            android:text="00:00"
+            android:textColor="@color/colorPrimaryDarkTrans"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/fragment3_heji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fragment3_qian"
+            android:text="合计："
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
 </LinearLayout>

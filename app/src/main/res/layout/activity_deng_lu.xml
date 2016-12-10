@@ -50,10 +50,13 @@
                 android:textSize="20sp"/>
 
             <EditText
+                android:id="@+id/fragment4_zhangHao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/fragment4_zh"
-                android:hint="手机号/邮箱/用户名/门店会员卡"/>
+                android:hint="手机号/邮箱/用户名/门店会员卡"
+                android:maxLength="12"
+                android:maxLines="1"/>
 
         </RelativeLayout>
 
@@ -73,11 +76,13 @@
                 android:textSize="20sp"/>
 
             <EditText
-                android:id="@+id/fragment4_mima"
+                android:id="@+id/fragment4_miMa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/fragment4_mm"
                 android:hint="密码"
+                android:maxLength="18"
+                android:maxLines="1"
                 android:password="true"/>
 
 
@@ -88,7 +93,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             >
-
 
             <TextView
                 android:id="@+id/fragment4_tv"
@@ -109,16 +113,20 @@
                 />
         </RelativeLayout>
 
-
-        <Button
-            android:id="@+id/fragment4_dengLu"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="#66cc99"
-            android:text="登录"
-            android:textSize="20sp"/>
+            android:layout_marginTop="20dp">
 
+            <Button
+                android:id="@+id/fragment4_dengLu"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#cccccc"
+                android:text="提交"
+                android:textSize="20sp"/>
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -140,6 +148,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/fragment4_zhuCe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -176,17 +185,18 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/fragment4_qq"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/icon_store_membership_card"/>
+                        android:background="@drawable/qq"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="门店会员卡"/>
+                        android:text="QQ"/>
 
 
                 </LinearLayout>
@@ -197,21 +207,43 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/fragment4_weixin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/icon_yfb"/>
+                        android:background="@drawable/weixin"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="易付宝"/>
+                        android:text="微信"/>
 
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/fragment4_fenxiang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/qq"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="分享"/>
+
+
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

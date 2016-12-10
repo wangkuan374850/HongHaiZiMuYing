@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alipay.sdk.app.PayTask;
+import com.example.wangkuan.honghaizimuying.db.ZengShanGaiCha;
 import com.example.wangkuan.honghaizimuying.fragment.PingJia;
 import com.example.wangkuan.honghaizimuying.fragment.ShangPin;
 import com.example.wangkuan.honghaizimuying.fragment.XingQing;
@@ -45,28 +46,36 @@ public class ShangPinXiangQingActivity extends AppCompatActivity {
     private ArrayList<TextView> ls = new ArrayList<TextView>();
     private TextView liJiGouMai;//立即购买按钮，点击第三方支付
 
-    /**
-     * 支付宝支付业务：入参app_id
-     */
+    // 商户PID
     public static final String APPID = "2088901305856832";
-
-    /**
-     * 支付宝账户登录授权业务：入参pid值
-     */
-    public static final String PID = "8@qdbaiu.com";
-    /**
-     * 支付宝账户登录授权业务：入参target_id值
-     */
-    public static final String TARGET_ID = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCd6rV3vOE578e6VlGEakZpPdsX2QmGdIfi/yHe cg1CIEWzX9wn2LNFGtu1EzYQyKACG/RKeog0pUJEVGfBG30zFdNY2YocYJNdPtADqhJbS0GJm7f8 1vRiLKtOwKjdiz9oMEwxhc/5fysfMbercidRmlCDPU9BNL1UPb9bAx25JwIDAQAB";
-
-    /**
-     * 商户私钥，pkcs8格式
-     */
-    public static final String RSA_PRIVATE = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAM/KCxg/OIj6er2GEig0DOkHqBSzEPHGigMbTXP1k2nrxEHeE59xOOuyovQH/A1LgbuVKyOac3uAN4GXIBEoozRVzDhu5dobeNm48BPcpYSAfvN3K/5GLacvJeENqsiBx8KufM/9inlHaDRQV7WhX1Oe2ckat1EkdHwxxQgc36NhAgMBAAECgYEAwn3sWpq6cUR65LD8h9MIjopTImTlpFjgz72bhsHDZK6A+eJDXcddrwh7DI34t/0IBqu+QEoOc/f0fIEXS9hMwTvFY59XG7M8M6SdeaAbemrGmZ1IdD6YDmpbQFHn2ishaYF0YDZIkBS3WLDFrtk/efaarBCpGAVXeEiVQE4LewECQQD5W1rpkq+dHDRzzdtdi1bJ479wun5CfmVDVb2CJH7Iz0t8zyp/iEVV2QELnxZMphmoSzKaLXutTTj2OImpzCtRAkEA1VMxG6nQq9NkU51H1+I3mlUXRZ0XeFA1GFJ7xWpNRAVhEWlDz2zy9v/gX+RFpNC3f5uznycas70Xp78ew43TEQJAZFFqi9mlqTF1sLk67bFnIyXrGPEOZrXvC13tNfR0xVkQZ4/46wHp0xXQo9pG4GNaoyhNnVV7EkelCPnJ+HPZYQJAQh6T9QgQZoGR8hyovPAf3dUL7oa/VIo/urcuJ8VIB5JHQNdIrk0NjaNHj1E4iNosVgATj3vWWel9IIArb99QkQJAKvfm78lwnImtg5IM604hdn/Wu1XF8tpxsKLWcnfchMr0bM9rCmKmhAY+wdmqSyPZRiNb1QaaaDTqJxLy6AnQ+Q==\n";
-
+    // 商户收款账号
+    public static final String SELLER = "8@qdbaiu.com";
+    // 商户私钥，pkcs8格式
+    public static final String RSA_PRIVATE = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAM" +
+            "/KCxg/OIj6er2GEig0DOkHqBSzEPHGigMbTXP1k2nrxEHeE59xOOuy" +
+            "ovQH/A1LgbuVKyOac3uAN4GXIBEoozRVzDhu5dobeNm48BPcpYSAfvN3K" +
+            "/5GLacvJeENqsiBx8KufM/9inlHaDRQV7WhX1Oe2ckat1EkdHwxxQgc" +
+            "36NhAgMBAAECgYEAwn3sWpq6cUR65LD8h9MIjopTImTlpFjgz72bhsHD" +
+            "ZK6A+eJDXcddrwh7DI34t/0IBqu+QEoOc/f0fIEXS9hMwTvFY59XG7M8" +
+            "M6SdeaAbemrGmZ1IdD6YDmpbQFHn2ishaYF0YDZIkBS3WLDFrtk/efaar" +
+            "BCpGAVXeEiVQE4LewECQQD5W1rpkq+dHDRzzdtdi1bJ479wun5CfmVDV" +
+            "b2CJH7Iz0t8zyp/iEVV2QELnxZMphmoSzKaLXutTTj2OImpzCtRAkEA1" +
+            "VMxG6nQq9NkU51H1+I3mlUXRZ0XeFA1GFJ7xWpNRAVhEWlDz2zy9v/g" +
+            "X+RFpNC3f5uznycas70Xp78ew43TEQJAZFFqi9mlqTF1sLk67bFnIyX" +
+            "rGPEOZrXvC13tNfR0xVkQZ4/46wHp0xXQo9pG4GNaoyhNnVV7EkelCPn" +
+            "J+HPZYQJAQh6T9QgQZoGR8hyovPAf3dUL7oa/VIo/urcuJ8VIB5JHQNdI" +
+            "rk0NjaNHj1E4iNosVgATj3vWWel9IIArb99QkQJAKvfm78lwnImtg5IM6" +
+            "04hdn/Wu1XF8tpxsKLWcnfchMr0bM9rCmKmhAY+wdmqSyPZRiNb1QaaaD" +
+            "TqJxLy6AnQ+Q==";
+    // 支付宝公钥
+    public static final String RSA_PUBLIC = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCd6rV3vOE578e6V" +
+            "lGEakZpPdsX2QmGdIfi/yHe cg1CIEWzX9wn2LNFGtu1EzYQyKACG/RKeog0pUJEVGfBG30zFdNY2YocYJNdPtA" +
+            "DqhJbS0GJm7f8 1vRiLKtOwKjdiz9oMEwxhc/5fysfMbercidRmlCDPU9BNL1UPb9bAx25JwIDAQAB";
     private static final int SDK_PAY_FLAG = 1;
-    private static final int SDK_AUTH_FLAG = 2;
 
+    private TextView jiaRuGouWuChe;
+
+    private int aa = 1;
     private Handler mHandler = new Handler() {
         @SuppressWarnings("unused")
         public void handleMessage(Message msg) {
@@ -97,11 +106,17 @@ public class ShangPinXiangQingActivity extends AppCompatActivity {
 
         ;
     };
+    private ZengShanGaiCha zsgc;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shang_pin_xiang_qing);
+
+        //初始化数据库
+        zsgc = new ZengShanGaiCha(getApplicationContext());
+
         //找控件
         kongJian();
         //设置ViewaPager
@@ -109,9 +124,21 @@ public class ShangPinXiangQingActivity extends AppCompatActivity {
         //点击事件
         dianJiShiJian();
 
+
     }
 
     private void dianJiShiJian() {
+
+        jiaRuGouWuChe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                zsgc.getzeng("尿不湿", (int) (100 + Math.random() * 300));
+                Toast.makeText(getApplicationContext(), "添加成功啦！！！", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         //把数据放到奥集合中
         ls.add(shangPin);
         ls.add(xiangQing);
@@ -253,6 +280,6 @@ public class ShangPinXiangQingActivity extends AppCompatActivity {
         liJi = (TextView) findViewById(R.id.xiangqingye_liJiGouMai);
         jiaRu = (TextView) findViewById(R.id.xiangqingye_jiaRuGouWuChe);
         liJiGouMai = (TextView) findViewById(R.id.xiangqingye_liJiGouMai);
-
+        jiaRuGouWuChe = (TextView) findViewById(R.id.xiangqingye_jiaRuGouWuChe);
     }
 }
